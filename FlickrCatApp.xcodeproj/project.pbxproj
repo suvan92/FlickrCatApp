@@ -13,6 +13,7 @@
 		14F2E04D1DE3BFFF004ECE2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F2E04B1DE3BFFF004ECE2C /* Main.storyboard */; };
 		14F2E04F1DE3BFFF004ECE2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14F2E04E1DE3BFFF004ECE2C /* Assets.xcassets */; };
 		14F2E0521DE3BFFF004ECE2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F2E0501DE3BFFF004ECE2C /* LaunchScreen.storyboard */; };
+		14F2E05E1DE3C075004ECE2C /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F2E05D1DE3C075004ECE2C /* Photo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		14F2E04E1DE3BFFF004ECE2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14F2E0511DE3BFFF004ECE2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14F2E0531DE3BFFF004ECE2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14F2E05C1DE3C075004ECE2C /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		14F2E05D1DE3C075004ECE2C /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +61,10 @@
 		14F2E0411DE3BFFF004ECE2C /* FlickrCatApp */ = {
 			isa = PBXGroup;
 			children = (
-				14F2E0451DE3BFFF004ECE2C /* AppDelegate.h */,
-				14F2E0461DE3BFFF004ECE2C /* AppDelegate.m */,
-				14F2E0481DE3BFFF004ECE2C /* ViewController.h */,
-				14F2E0491DE3BFFF004ECE2C /* ViewController.m */,
-				14F2E04B1DE3BFFF004ECE2C /* Main.storyboard */,
+				14F2E05B1DE3C039004ECE2C /* UI */,
+				14F2E05A1DE3C032004ECE2C /* Controllers */,
+				14F2E0591DE3C02C004ECE2C /* Models */,
 				14F2E04E1DE3BFFF004ECE2C /* Assets.xcassets */,
-				14F2E0501DE3BFFF004ECE2C /* LaunchScreen.storyboard */,
 				14F2E0531DE3BFFF004ECE2C /* Info.plist */,
 				14F2E0421DE3BFFF004ECE2C /* Supporting Files */,
 			);
@@ -77,6 +77,35 @@
 				14F2E0431DE3BFFF004ECE2C /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		14F2E0591DE3C02C004ECE2C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				14F2E0451DE3BFFF004ECE2C /* AppDelegate.h */,
+				14F2E0461DE3BFFF004ECE2C /* AppDelegate.m */,
+				14F2E05C1DE3C075004ECE2C /* Photo.h */,
+				14F2E05D1DE3C075004ECE2C /* Photo.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		14F2E05A1DE3C032004ECE2C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				14F2E0481DE3BFFF004ECE2C /* ViewController.h */,
+				14F2E0491DE3BFFF004ECE2C /* ViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		14F2E05B1DE3C039004ECE2C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				14F2E04B1DE3BFFF004ECE2C /* Main.storyboard */,
+				14F2E0501DE3BFFF004ECE2C /* LaunchScreen.storyboard */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14F2E05E1DE3C075004ECE2C /* Photo.m in Sources */,
 				14F2E04A1DE3BFFF004ECE2C /* ViewController.m in Sources */,
 				14F2E0471DE3BFFF004ECE2C /* AppDelegate.m in Sources */,
 				14F2E0441DE3BFFF004ECE2C /* main.m in Sources */,
