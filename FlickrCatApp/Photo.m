@@ -20,7 +20,6 @@
         _photoSecret = photoSecret;
         _photoTitle = title;
         [self createPhotoUrl];
-        [self getPhotoFromInternet];
     }   
     return self;
 }
@@ -45,6 +44,7 @@
         
         NSData *data = [NSData dataWithContentsOfURL:location];
         self.photoImage = [UIImage imageWithData:data];
+        [self.delegate photoDidGetAssigned];
     }];
     [downloadTask resume];
 }

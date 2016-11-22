@@ -32,6 +32,7 @@
 		14F2E05D1DE3C075004ECE2C /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		14F2E05F1DE3D000004ECE2C /* CatImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatImageCell.h; sourceTree = "<group>"; };
 		14F2E0601DE3D000004ECE2C /* CatImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatImageCell.m; sourceTree = "<group>"; };
+		14F2E0621DE3D6AA004ECE2C /* PhotoDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +90,7 @@
 				14F2E0461DE3BFFF004ECE2C /* AppDelegate.m */,
 				14F2E05F1DE3D000004ECE2C /* CatImageCell.h */,
 				14F2E0601DE3D000004ECE2C /* CatImageCell.m */,
+				14F2E0621DE3D6AA004ECE2C /* PhotoDelegate.h */,
 				14F2E05C1DE3C075004ECE2C /* Photo.h */,
 				14F2E05D1DE3C075004ECE2C /* Photo.m */,
 			);

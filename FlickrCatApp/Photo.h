@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "PhotoDelegate.h"
 
 @interface Photo : NSObject
 
@@ -18,7 +19,9 @@
 @property (nonatomic, strong) NSString *photoTitle;
 @property (nonatomic, strong) NSURL *photoUrl;
 @property (nonatomic, strong) UIImage *photoImage;
+@property (nonatomic, strong) id <PhotoDelegate> delegate;
 
 - (instancetype)initWithfarmNumber:(NSNumber *)farmNum serverId:(NSString *)serverId photoId:(NSString *)photoId secret:(NSString *)photoSecret andTitle:(NSString *)title;
+- (void)getPhotoFromInternet;
 
 @end

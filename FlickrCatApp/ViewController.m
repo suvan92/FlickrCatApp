@@ -10,7 +10,7 @@
 #import "CatImageCell.h"
 #import "Photo.h"
 
-@interface ViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
+@interface ViewController () <UICollectionViewDelegate, UICollectionViewDataSource, PhotoDelegate>
 
 @property (nonatomic, strong) NSMutableArray *listOfPhotos;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -35,11 +35,18 @@
     CatImageCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"catImageCell" forIndexPath:indexPath];
     
     Photo *currentPhoto = self.listOfPhotos[indexPath.row];
+    if (!currentPhoto.photoImage) {
+        [currentPhoto getPhotoFromInternet];
+    }
     [cell configureCell:currentPhoto];
-    
     return cell;
 }
 
+#pragma mark - Photo Delegate
+
+-(void)photoDidGetAssigned{
+    [self.collectionView reloadData];
+}
 
 #pragma mark - Flickr JSON
 
@@ -81,7 +88,7 @@
         
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             
-            // reload collectionView Data
+            [self.collectionView reloadData];
         }];
     }];
     
