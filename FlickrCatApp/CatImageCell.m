@@ -14,7 +14,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *catImageView;
 @property (weak, nonatomic) IBOutlet UILabel *catImageTitleLabel;
 
-
 @end
 
 
@@ -22,6 +21,10 @@
 
 - (void)configureCell:(Photo *)photo {
     
+    self.catImageView.image = photo.photoImage;
+    self.catImageView.contentMode = UIViewContentModeScaleAspectFit;
+    
+    self.catImageTitleLabel.text = photo.photoTitle;
 }
 
 @end

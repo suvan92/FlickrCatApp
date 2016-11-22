@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CatImageCell.h"
 #import "Photo.h"
 
 @interface ViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
@@ -31,7 +32,10 @@
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell;
+    CatImageCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"catImageCell" forIndexPath:indexPath];
+    
+    Photo *currentPhoto = self.listOfPhotos[indexPath.row];
+    [cell configureCell:currentPhoto];
     
     return cell;
 }
