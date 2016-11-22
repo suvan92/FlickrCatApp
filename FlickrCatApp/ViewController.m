@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "Photo.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) NSMutableArray *listOfPhotos;
 
 @end
 
@@ -16,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.listOfPhotos = [NSMutableArray new];
     
     NSURL *jsonUrl = [NSURL URLWithString:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&nojsoncallback=1&api_key=a7e8eeb660518f4cb05325751027181d&tags=cat"];
     NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:jsonUrl];
@@ -41,10 +45,26 @@
         NSDictionary *photosDict = jsonDictionary[@"photos"];
         NSArray *arrayOfPhotos = photosDict[@"photo"];
         
+        for (NSDictionary *photoInfo in arrayOfPhotos) {
+            NSNumber *farmNum = photoInfo[@"farm"];
+            NSString *serverId = photoInfo[@"server"];
+            NSString *photoId = photoInfo[@"id"];
+            NSString *photoSecret = photoInfo[@"secret"];
+            NSString *photoTitle = photoInfo[@"title"];
+            
+            Photo *newPhoto = [[Photo alloc] initWithfarmNumber:farmNum serverId:serverId photoId:photoId secret:photoSecret andTitle:photoTitle];
+            [self.listOfPhotos addObject:newPhoto];
+        }
+        
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            
+            // reload collectionView Data
+        }];
     }];
     
     [dataTask resume];
     
 }
+
 
 @end
