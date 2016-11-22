@@ -14,6 +14,7 @@
 		14F2E04F1DE3BFFF004ECE2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14F2E04E1DE3BFFF004ECE2C /* Assets.xcassets */; };
 		14F2E0521DE3BFFF004ECE2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F2E0501DE3BFFF004ECE2C /* LaunchScreen.storyboard */; };
 		14F2E05E1DE3C075004ECE2C /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F2E05D1DE3C075004ECE2C /* Photo.m */; };
+		14F2E0611DE3D000004ECE2C /* CatImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F2E0601DE3D000004ECE2C /* CatImageCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		14F2E0531DE3BFFF004ECE2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14F2E05C1DE3C075004ECE2C /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
 		14F2E05D1DE3C075004ECE2C /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		14F2E05F1DE3D000004ECE2C /* CatImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatImageCell.h; sourceTree = "<group>"; };
+		14F2E0601DE3D000004ECE2C /* CatImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatImageCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,8 @@
 			children = (
 				14F2E0451DE3BFFF004ECE2C /* AppDelegate.h */,
 				14F2E0461DE3BFFF004ECE2C /* AppDelegate.m */,
+				14F2E05F1DE3D000004ECE2C /* CatImageCell.h */,
+				14F2E0601DE3D000004ECE2C /* CatImageCell.m */,
 				14F2E05C1DE3C075004ECE2C /* Photo.h */,
 				14F2E05D1DE3C075004ECE2C /* Photo.m */,
 			);
@@ -183,6 +188,7 @@
 				14F2E04A1DE3BFFF004ECE2C /* ViewController.m in Sources */,
 				14F2E0471DE3BFFF004ECE2C /* AppDelegate.m in Sources */,
 				14F2E0441DE3BFFF004ECE2C /* main.m in Sources */,
+				14F2E0611DE3D000004ECE2C /* CatImageCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
