@@ -19,8 +19,15 @@
         _photoId = photoId;
         _photoSecret = photoSecret;
         _photoTitle = title;
+        [self createPhotoUrl];
     }   
     return self;
+}
+
+- (void)createPhotoUrl {
+    NSString *urlString = [NSString stringWithFormat:@"https://farm%@.staticflickr.com/%@/%@_%@.jpg", self.farmNumber, self.serverId, self.photoId, self.photoSecret];
+    
+    self.photoUrl = [NSURL URLWithString:urlString];
 }
 
 @end

@@ -15,6 +15,7 @@
 @property (nonatomic, strong) NSString *photoId;
 @property (nonatomic, strong) NSString *photoSecret;
 @property (nonatomic, strong) NSString *photoTitle;
+@property (nonatomic, strong) NSURL *photoUrl;
 
 - (instancetype)initWithfarmNumber:(NSNumber *)farmNum serverId:(NSString *)serverId photoId:(NSString *)photoId secret:(NSString *)photoSecret andTitle:(NSString *)title;
 
