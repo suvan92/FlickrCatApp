@@ -84,6 +84,7 @@
             
             Photo *newPhoto = [[Photo alloc] initWithfarmNumber:farmNum serverId:serverId photoId:photoId secret:photoSecret andTitle:photoTitle];
             [self.listOfPhotos addObject:newPhoto];
+            newPhoto.delegate = self;
         }
         
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
