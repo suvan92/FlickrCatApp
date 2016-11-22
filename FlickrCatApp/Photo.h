@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface Photo : NSObject
 
@@ -16,19 +17,8 @@
 @property (nonatomic, strong) NSString *photoSecret;
 @property (nonatomic, strong) NSString *photoTitle;
 @property (nonatomic, strong) NSURL *photoUrl;
+@property (nonatomic, strong) UIImage *photoImage;
 
 - (instancetype)initWithfarmNumber:(NSNumber *)farmNum serverId:(NSString *)serverId photoId:(NSString *)photoId secret:(NSString *)photoSecret andTitle:(NSString *)title;
 
 @end
-
-//"id": "31051084231",
-//"owner": "37842091@N08",
-//"secret": "6488b856bf",
-//"server": "5562",
-//"farm": 6,
-//"title": "Toronto Cat - 2 of 2",
-//"ispublic": 1,
-//"isfriend": 0,
-//"isfamily": 0
-
-//https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg
