@@ -9,9 +9,10 @@
 #import "ViewController.h"
 #import "Photo.h"
 
-@interface ViewController ()
+@interface ViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (nonatomic, strong) NSMutableArray *listOfPhotos;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
 
@@ -20,7 +21,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.listOfPhotos = [NSMutableArray new];
+    [self flickrJsonPhotoDownload];
+}
+
+#pragma mark - Collection View
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 1;
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell *cell;
     
+    return cell;
+}
+
+
+#pragma mark - Flickr JSON
+
+- (void)flickrJsonPhotoDownload {
     NSURL *jsonUrl = [NSURL URLWithString:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&nojsoncallback=1&api_key=a7e8eeb660518f4cb05325751027181d&tags=cat"];
     NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:jsonUrl];
     
@@ -28,7 +47,7 @@
     NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];
     
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:urlRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-       
+        
         if (error) {
             NSLog(@"error: %@", error.localizedDescription);
             return;
@@ -63,8 +82,6 @@
     }];
     
     [dataTask resume];
-    
 }
-
 
 @end
